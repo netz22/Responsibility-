@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Money Tracker</title>
+<link rel="manifest" href="manifest.json">
+<style>
+body{font-family:Arial;margin:20px;background:#f5f5f5}
+.card{background:white;padding:15px;border-radius:10px;margin-bottom:15px}
+button{padding:10px 15px;border:none;border-radius:8px;background:#2e7dff;color:white}
+input,select{padding:8px;margin:5px 0;width:100%}
+</style>
+</head>
+<body>
+
+<h2>💰 Money Tracker</h2>
+
+<div class="card">
+<h3>Balance</h3>
+<p id="balance">0</p>
+<p>Income: <span id="income">0</span></p>
+<p>Expenses: <span id="expenses">0</span></p>
+</div>
+
+<div class="card">
+<h3>Add Transaction</h3>
+<input id="amount" placeholder="Amount">
+<select id="type">
+<option value="income">Income</option>
+<option value="expense">Expense</option>
+</select>
+<input id="category" placeholder="Category">
+<button onclick="add()">Save</button>
+</div>
+
+<div class="card">
+<h3>Transactions</h3>
+<ul id="list"></ul>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
